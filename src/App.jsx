@@ -1,10 +1,18 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import Json from './services/products/json';
+import Products from './services/products/products';
+import Search from './services/products/search';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <div>
+        {/* <Products /> */}
+        <Search />
+        {/* <Json /> */}
+      </div>
+    </>
+  );
 }
 
 export default App;

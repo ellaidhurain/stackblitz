@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const baseUrl = 'http://localhost:3500';
+const baseUrl = 'http://localhost:3000';
 
 const getToken = () => {
   const token = getTokenFromLocalStorage(); // Your custom function to get the token from local storage or any other source
@@ -20,14 +20,8 @@ export const apiSlice = createApi({
     baseUrl,
     // prepareHeaders: getToken,
   }), // Use Fetch API under the hood
-  tagTypes: ['user'],
+  tagTypes: ['products'],
   endpoints: () => ({}),
-  // endpoints: (builder) => ({
-  //   getUserById: builder.query({
-  //     query: (userId) => `users/${userId}`, // API endpoint URL will be appended to the baseUrl
-  //     providesTags: ['user'], // Tags that the response will be cached
-  //   }),
-  // }),
 });
 
 //createApi({...}): This is a function that creates an API slice. It takes an object as an argument with various configurations to set up the API.
